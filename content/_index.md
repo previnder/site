@@ -6,4 +6,4 @@ Hi I’m Previnder, a software developer from Sri Lanka (I write Go and Javascri
 
 On this website, I write about programming, technology, design, and just about anything that interests me.
 
-You can find me also on: [Bluesky](https://bsky.app/profile/previnder.com), [X (Twitter)](https://x.com/previnderx), and [Github](https://github.com/previnder). To contact me directly, feel free to send me an email at hello@previnder.com.
+You can find me also on: [Bluesky](https://bsky.app/profile/previnder.com), [X (Twitter)](https://x.com/previnderx), and [Github](https://github.com/previnder) (to contact me directly, feel free to send me an email at hello@previnder.com).
