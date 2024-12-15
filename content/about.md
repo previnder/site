@@ -1,6 +1,7 @@
 ---
 title: About
 url: /about
+draft: true
 ---
 
 # About
