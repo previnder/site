@@ -4,6 +4,7 @@ title = 'Previnder'
 
 [permalinks]
 essays = '/:slug/'
+notes = '/:slug/'
 
 [markup.goldmark.renderer]
     unsafe = true

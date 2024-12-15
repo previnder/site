@@ -322,6 +322,14 @@ ul {
       content: "–";
     }
   }
+  &.not-dashed {
+    li {
+      padding-left: 0;
+      &::before {
+        display: none;
+      }
+    }
+  }
 }
 
 ol {
@@ -471,27 +479,30 @@ hr {
 }
 
 .theme-button {
-  svg {
+  .is-sun,
+  .is-moon {
     display: none;
   }
-  .letter {
-    display: none;
-    position: absolute;
-    font-size: 1.4rem;
-    font-weight: 400;
-    top: 5px;
-    right: -5px;
+  .text {
+    font-size: 1.5rem;
+    padding: 0 8px;
+  }
+  &.is-text svg {
+    display: none !important;
+  }
+  &:not(.is-text) .text {
+    display: none !important;
   }
 }
 
 html.theme-dark {
-  .theme-button svg.is-sun {
+  .theme-button .is-sun {
     display: block;
   }
 }
 
 html:not(.theme-dark) {
-  .theme-button svg.is-moon {
+  .theme-button .is-moon {
     display: block;
   }
 }

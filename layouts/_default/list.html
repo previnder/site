@@ -2,6 +2,15 @@
 <div class="wrap">
   <div class="page page-home">
     {{ .Content }}
+    <h2>Posts</h2>
+    <ul class="posts-list">
+      {{ range first 5 (where .Site.RegularPages "Type" "notes") }}
+      <li class="posts-list-item">
+        <a href="{{ .Permalink }}">{{ .Title }}</a>
+      </li>
+      {{ end }}
+    </ul>
+    <!--
     <h2>Latest Essays <a href="/essays/">View all</a></h2>
     <ul class="posts-list">
       {{ range first 5 (where .Site.RegularPages "Type" "essays") }}
@@ -24,6 +33,7 @@
       </li>
       {{ end }}
     </ul>
+    -->
     <!--
     <h2>Other Pages</h2>
     <p>These are some static pages that I update from time to time:</p>
