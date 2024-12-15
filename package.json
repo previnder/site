@@ -1,0 +1,23 @@
+{
+  "name": "previnder.com",
+  "version": "1.0.0",
+  "description": "",
+  "main": "",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "format": "npx prettier --write './**/*.{js,css,scss,md,json,html}' --config ./.prettierrc.json --ignore-path './.prettierignore'"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/previnder/site.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/previnder/site/issues"
+  },
+  "homepage": "https://github.com/previnder/site#readme",
+  "devDependencies": {
+    "prettier": "2.8.8"
+  }
+}

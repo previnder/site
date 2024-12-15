@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="color-scheme" content="dark light" />
+    <title>{{ .Page.Title }}</title>
+    {{ $style := resources.Get "styles.scss" | resources.ToCSS }}
+    <link rel="stylesheet" href="{{ $style.Permalink }}" />
+    <link
+      rel="preload"
+      as="font"
+      type="font/woff2"
+      crossorigin
+      href="/fonts/InterVariable.woff2"
+    />
+    <link
+      rel="preload"
+      as="font"
+      type="font/woff2"
+      crossorigin
+      href="/fonts/Calistoga.woff2"
+    />
+    <link
+      rel="preload"
+      as="font"
+      type="font/woff2"
+      crossorigin
+      href="/fonts/Newsreader-VariableFont.woff2"
+    />
+    <link rel="shortcut icon" href="/favicon-32x32.png" type="image/png" />
+    <meta property="og:site_name" content="Previnder" />
+    <meta
+      property="og:image"
+      content="{{ .Page.Site.BaseURL }}images/og_image.png"
+    />
+    <meta property="og:title" content="{{ .Page.Title }}" />
+    {{ if .Page.Description }}
+    <menu name="description" content="{{ .Page.Description }}" />
+    <meta property="og:description" content="{{ .Page.Description }}" />
+    {{ end }}
+  </head>
+  <body class="no-margins">
+    <div class="body-top">
+      {{ partial "nav.html" }} {{ block "main" . }} {{ end }}
+    </div>
+    <div class="body-bottom">{{ partial "footer.html" }}</div>
+    <!---
+    <div class="modal-container">
+      <div class="modal">
+        <div class="modal-title">Settings</div>
+        <div class="modal-content settings">
+          <div class="setting">
+            <div class="setting-title">Appearance</div>
+            <div class="setting-description">
+              Lorem ipsum dolor sit amet consectetur adipisicing elit. Eum,
+              error.
+            </div>
+            <div class="setting-content">
+              <select name="" id="">
+                <option value="">Device</option>
+                <option value="">Light</option>
+                <option value="">Dark</option>
+              </select>
+            </div>
+          </div>
+        </div>
+        <div class="modal-buttons" style="display: none">
+          <button>Close</button>
+        </div>
+      </div>
+    </div>
+    -->
+    <script>
+      function getTheme() {
+        const storedTheme = window.localStorage.getItem("theme");
+        if (storedTheme === "dark" || storedTheme === "light") {
+          return storedTheme;
+        }
+        return window.matchMedia &&
+          window.matchMedia("(prefers-color-scheme: dark)").matches
+          ? "dark"
+          : "light";
+      }
+
+      function initTheme() {
+        function setMetaTag(color) {
+          const tag = document.querySelector('head meta[name="theme-color"]');
+          if (tag) {
+            tag.content = color;
+            return;
+          }
+          const newTag = document.createElement("meta");
+          newTag.name = "theme-color";
+          newTag.content = color;
+          document.head.appendChild(newTag);
+        }
+        if (getTheme() === "dark") {
+          document.documentElement.classList.add("theme-dark");
+        } else {
+          document.documentElement.classList.remove("theme-dark");
+        }
+        setMetaTag(
+          window
+            .getComputedStyle(document.documentElement)
+            .getPropertyValue("--navbar-color")
+        );
+      }
+
+      function toggleTheme() {
+        let darkNow = document.documentElement.classList.contains("theme-dark");
+        window.localStorage.setItem("theme", darkNow ? "light" : "dark");
+        initTheme();
+      }
+
+      document.addEventListener("DOMContentLoaded", function () {
+        initTheme();
+        if (window.matchMedia) {
+          window
+            .matchMedia("(prefers-color-scheme: dark)")
+            .addEventListener("change", initTheme);
+        }
+        document
+          .querySelector(".navbar .theme-button")
+          .addEventListener("click", toggleTheme);
+      });
+    </script>
+  </body>
+</html>

@@ -1,0 +1,21 @@
+{{ define "main" }}
+<div class="wrap">
+  <div class="page post is-essay">
+    <div class="post-head">
+      <h1 class="post-title">{{ .Title }}</h1>
+      <div class="post-date">
+        Posted on {{ .Date.Format "Jan 02, 2006" }} in
+        <a href="/essays/">Essays</a>
+      </div>
+      <!--
+      <div class="post-tags">
+        <a href="#" class="button is-tag">Philosophy</a>
+        <a href="#" class="button is-tag">Ethics</a>
+      </div>
+      -->
+    </div>
+    <div class="post-content">{{ .Content }}</div>
+    <div class="post-extra">{{ partial "nlbox.html" }}</div>
+  </div>
+</div>
+{{ end }}
