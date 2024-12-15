@@ -78,7 +78,7 @@
   --separator: 1px solid rgba(0, 0, 0, 0.5);
   --fs-base: 10px;
   --font: "Inter", Helvetica, Roboto, Noto, "Segoe UI", arial, sans-serif;
-  --fs-normal: 1.76rem;
+  --fs-normal: 1.72rem;
   --line-height: 1.65; // normal;
   --font-button: var(--font);
   --fs-button: 1.6rem;
@@ -155,6 +155,7 @@ body {
   @include mobile() {
     padding-left: 15px;
     padding-right: 15px;
+    max-width: 100vw;
   }
 }
 
@@ -397,13 +398,25 @@ blockquote {
   }
 }
 
+code {
+  background-color: rgba(var(--base-fg), 0.088);
+  padding-left: 4px;
+  padding-right: 4px;
+}
+
 pre {
   font-family: monospace;
-  font-size: 1.5rem;
+  font-size: 1.4rem;
   background-color: rgba(var(--base-fg), 0.065);
   padding: var(--gap);
   border-radius: var(--border-radius);
   border: 1px solid rgba(var(--base-fg), 0.35);
+  overflow-y: auto;
+  code {
+    background-color: unset;
+    padding-left: unset;
+    padding-right: unset;
+  }
 }
 
 hr {
