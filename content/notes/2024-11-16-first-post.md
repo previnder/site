@@ -1,7 +1,7 @@
 ---
-title: In the beginning
+title: By way of introduction
 date: 2024-11-16
-slug: /in-the-beginning
+slug: /introduction
 ---
 
 There is perhaps a uniquely human instinct to leave our mark on the world, if nothing else to simply say that we were once here to whomever comes later. People have a tendency to carve their names or initials on rocks, trunks of trees, walls, benches, or some other hard surface they know is not going to be withered away by the elements too soon, especially if they’ve spent a lot of time in that place. The image that best illustrates this instinct to me is the stenciled hands humans have left, thousands of years ago, on the walls of [Cueva de las Manos](https://en.wikipedia.org/wiki/Cueva_de_las_Manos), in Santa Cruz, Argentina.

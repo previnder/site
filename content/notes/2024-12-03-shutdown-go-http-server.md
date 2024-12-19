@@ -1,5 +1,5 @@
 ---
-title: How to shutdown a Go HTTP server gracefully
+title: How to gracefully shutdown a Go HTTP server
 date: 2024-12-03
 slug: /shutdown-go-http-server
 ---
