@@ -30,14 +30,22 @@
     />
     <link rel="shortcut icon" href="/favicon-32x32.png" type="image/png" />
     <meta property="og:site_name" content="Previnder" />
+    <meta property="og:title" content="{{ .Page.Title }}" />
     <meta
       property="og:image"
       content="{{ .Page.Site.BaseURL }}images/og_image.png"
     />
-    <meta property="og:title" content="{{ .Page.Title }}" />
+    <meta name="twitter:card" content="summary" />
+    <meta name="twitter:site" content="@previnderx" />
+    <meta name="twitter:title" content="{{ .Page.Title }}" />
+    <meta
+      name="twitter:image"
+      content="{{ .Page.Site.BaseURL }}images/og_image.png"
+    />
     {{ if .Page.Description }}
     <menu name="description" content="{{ .Page.Description }}" />
     <meta property="og:description" content="{{ .Page.Description }}" />
+    <meta name="twitter:description" content="{{ .Page.Description }}" />
     {{ end }}
   </head>
   <body class="no-margins">
