@@ -55,6 +55,14 @@
   src: url("/fonts/Newsreader-Italic-VariableFont.woff2") format("woff2");
 }
 
+@font-face {
+  font-family: "FiraCode";
+  font-style: normal;
+  font-weight: 300 700;
+  font-display: swap;
+  src: url("/fonts/FiraCode-Variable.woff2") format("woff2");
+}
+
 :root {
   --base-bg: 255, 255, 255;
   --base-fg: 0, 0, 0;
@@ -405,7 +413,8 @@ code {
 }
 
 pre {
-  font-family: monospace;
+  font-family: "FiraCode", monospace;
+  font-weight: 435;
   font-size: 1.4rem;
   background-color: rgba(var(--base-fg), 0.065);
   padding: var(--gap);
