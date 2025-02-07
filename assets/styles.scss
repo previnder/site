@@ -413,6 +413,10 @@ code {
   padding-right: 4px;
 }
 
+html.theme-dark code {
+  background-color: rgba(var(--base-fg), 0.2);
+}
+
 pre {
   font-family: "FiraCode", monospace;
   font-weight: 435;
