@@ -5,7 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <meta name="color-scheme" content="dark light" />
     <title>{{ .Page.Title }}</title>
-    {{ $style := resources.Get "styles.scss" | css.Sass }}
+    {{- $style := resources.Get "styles.scss" | css.Sass }}
     <link rel="stylesheet" href="{{ $style.Permalink }}" />
     <link
       rel="preload"
@@ -31,22 +31,17 @@
     <link rel="shortcut icon" href="/favicon-32x32.png" type="image/png" />
     <meta property="og:site_name" content="Previnder" />
     <meta property="og:title" content="{{ .Page.Title }}" />
-    <meta
-      property="og:image"
-      content="{{ .Page.Site.BaseURL }}images/og_image.png"
-    />
+    {{- $ogimage := resources.Get "og_image.webp" }}
+    <meta property="og:image" content="{{ $ogimage.Permalink }}" />
     <meta name="twitter:card" content="summary" />
     <meta name="twitter:site" content="@previnderx" />
     <meta name="twitter:title" content="{{ .Page.Title }}" />
-    <meta
-      name="twitter:image"
-      content="{{ .Page.Site.BaseURL }}images/og_image.png"
-    />
+    <meta name="twitter:image" content="{{ $ogimage.Permalink }}" />
     {{ if .Page.Description }}
     <menu name="description" content="{{ .Page.Description }}" />
     <meta property="og:description" content="{{ .Page.Description }}" />
     <meta name="twitter:description" content="{{ .Page.Description }}" />
-    {{ end }}
+    {{ end -}}
   </head>
   <body class="no-margins">
     <div class="body-top">
