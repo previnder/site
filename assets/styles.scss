@@ -1075,7 +1075,6 @@ html:not(.theme-dark) {
   /* NameLabel */
   .chroma .nl {
     color: #900;
-    font-weight: bold;
   }
   /* NameNamespace */
   .chroma .nn {
@@ -1424,17 +1423,14 @@ html.theme-dark {
   /* NameClass */
   .chroma .nc {
     color: #f0883e;
-    font-weight: bold;
   }
   /* NameConstant */
   .chroma .no {
     color: #79c0ff;
-    font-weight: bold;
   }
   /* NameDecorator */
   .chroma .nd {
     color: #d2a8ff;
-    font-weight: bold;
   }
   /* NameEntity */
   .chroma .ni {
@@ -1443,12 +1439,10 @@ html.theme-dark {
   /* NameException */
   .chroma .ne {
     color: #f0883e;
-    font-weight: bold;
   }
   /* NameFunction */
   .chroma .nf {
     color: #d2a8ff;
-    font-weight: bold;
   }
   /* NameFunctionMagic */
   .chroma .fm {
@@ -1456,7 +1450,6 @@ html.theme-dark {
   /* NameLabel */
   .chroma .nl {
     color: #79c0ff;
-    font-weight: bold;
   }
   /* NameNamespace */
   .chroma .nn {
@@ -1584,12 +1577,10 @@ html.theme-dark {
   /* Operator */
   .chroma .o {
     color: #ff7b72;
-    font-weight: bold;
   }
   /* OperatorWord */
   .chroma .ow {
     color: #ff7b72;
-    font-weight: bold;
   }
   /* Punctuation */
   .chroma .p {
@@ -1617,19 +1608,16 @@ html.theme-dark {
   /* CommentSpecial */
   .chroma .cs {
     color: #8b949e;
-    font-weight: bold;
     font-style: italic;
   }
   /* CommentPreproc */
   .chroma .cp {
     color: #8b949e;
-    font-weight: bold;
     font-style: italic;
   }
   /* CommentPreprocFile */
   .chroma .cpf {
     color: #8b949e;
-    font-weight: bold;
     font-style: italic;
   }
   /* Generic */
@@ -1651,7 +1639,6 @@ html.theme-dark {
   /* GenericHeading */
   .chroma .gh {
     color: #79c0ff;
-    font-weight: bold;
   }
   /* GenericInserted */
   .chroma .gi {
@@ -1668,7 +1655,6 @@ html.theme-dark {
   }
   /* GenericStrong */
   .chroma .gs {
-    font-weight: bold;
   }
   /* GenericSubheading */
   .chroma .gu {
