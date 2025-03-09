@@ -14,7 +14,10 @@
       -->
     </div>
     <div class="post-content">{{ .Content }}</div>
-    <div class="post-extra">{{ partial "nlbox.html" }}</div>
+    <div class="post-extra">
+      <hr style="opacity: 0.7" />
+      {{ partial "comment-invite.html" }} {{ partial "nlbox.html" }}
+    </div>
   </div>
 </div>
 {{ end }}

@@ -1,0 +1,15 @@
+<div class="comment-invite">
+  If you have any thoughts, feedback, corrections, or just want to say hello,
+  feel free to email me at
+  <a href="mailto:hello@previnder.com">hello@previnder.com</a>.
+</div>
+<script>
+  document.addEventListener("DOMContentLoaded", function () {
+    const title = document.head.querySelector("title").innerText;
+    Array.from(document.querySelectorAll(".comment-invite a")).forEach(
+      (tag) => {
+        tag.href += `?subject=Reply to: ${title}`;
+      }
+    );
+  });
+</script>

@@ -593,7 +593,7 @@ body.has-margins .navbar {
   flex-direction: column;
   border: 1px solid rgba(var(--base-fg), 0.3);
   border-radius: var(--border-radius);
-  background: #bbd7e840;
+  background: #e6e2d6a8;
   font-family: var(--font-button);
   font-size: var(--fs-button);
   a:not(.button),
@@ -615,9 +615,10 @@ body.has-margins .navbar {
   }
   .button {
     color: var(--color-text);
-    background: #fff;
+    background: var(--color-bg);
     &:hover {
-      background-color: #8080800d;
+      background: var(--color-fg);
+      color: var(--color-bg);
     }
   }
 }
@@ -801,7 +802,7 @@ body.has-margins .footer {
     }
   }
   .post-content {
-    margin: 3rem 0;
+    margin: 3rem 0 var(--gap) 0;
     @include mobile() {
       margin: 2rem 0;
     }
@@ -832,12 +833,10 @@ body.has-margins .footer {
   }
   .footnotes {
     opacity: 0.7;
-    padding: var(--gap) 0;
-    hr {
-      margin-bottom: var(--gap);
-    }
+    padding-top: var(--gap);
     ol {
       padding: unset;
+      margin: 0;
       li * {
         display: inline;
       }
@@ -845,6 +844,14 @@ body.has-margins .footer {
   }
   .post-extra {
     margin-bottom: var(--gap);
+    display: flex;
+    flex-direction: column;
+    > * {
+      margin-bottom: var(--gap);
+      &:last-child {
+        margin-bottom: 0;
+      }
+    }
   }
   &.is-essay {
     .post-content {
@@ -883,6 +890,9 @@ body.has-margins .footer {
         line-height: 1.2;
       }
     }
+  }
+  hr {
+    margin-bottom: var(--gap);
   }
 }
 
@@ -1694,3 +1704,7 @@ html.theme-dark {
 }
 
 /**********************************************************************************************************/
+
+.comment-invite {
+  opacity: 0.7;
+}
