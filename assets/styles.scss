@@ -436,6 +436,33 @@ hr {
   border-top: 1px solid rgba(var(--base-fg), 0.5);
 }
 
+sup,
+.footnote-backref {
+  font-size: 1.4rem;
+}
+
+sup {
+  a {
+    text-decoration: none;
+    &::before {
+      content: "[";
+    }
+    &::after {
+      content: "]";
+    }
+    &:hover {
+      text-decoration: underline;
+      color: var(--color-link-hover);
+      &::before {
+        color: var(--color-link-hover);
+      }
+      &::after {
+        color: var(--color-link-hover);
+      }
+    }
+  }
+}
+
 .navbar {
   border-bottom: var(--navbar-border-bottom);
   background-color: var(--navbar-color);
