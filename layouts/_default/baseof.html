@@ -5,8 +5,14 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <meta name="color-scheme" content="dark light" />
     <title>{{ .Page.Title }}</title>
-    {{- $style := resources.Get "styles.scss" | css.Sass }}
-    <link rel="stylesheet" href="{{ $style.Permalink }}" />
+    {{ with resources.Get "styles.scss" }} {{ $opts := dict "enableSourceMap"
+    (not hugo.IsProduction) "outputStyle" (cond hugo.IsProduction "compressed"
+    "expanded") "targetPath" "css/main.css" "transpiler" "libsass" }} {{ with .
+    | toCSS $opts }} {{ if hugo.IsProduction }} {{ with . | fingerprint "md5" }}
+    <link rel="stylesheet" href="{{ .RelPermalink }}" />
+    {{ end }} {{ else }}
+    <link rel="stylesheet" href="{{ .RelPermalink }}" />
+    {{ end }} {{ end }} {{ end }}
     <link
       rel="preload"
       as="font"
